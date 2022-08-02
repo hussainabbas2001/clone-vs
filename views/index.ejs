@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <title>Document</title>
+</head>
+<body>
+  <div id="main">
+    <div id="left">
+      <div class="lfttop">
+        <h4>Uploads</h4>
+        <div class="icons">
+        <i id="fileIcon" class="ri-file-line"></i>
+        <i id="foldericon" class="ri-folder-2-line"></i>
+        <i id="reload"  class="ri-refresh-line"></i>
+      </div>
+      </div>
+      <form  autocomplete="off" action="/text">
+        <input id="file" type="text" name="fname"  placeholder="Enter Your File">
+      </form>
+      <form  autocomplete="off" action="/foldertext">
+        <input id="folder" type="text" name="folderName"  placeholder="Enter Your Folder">
+      </form>
+
+      <div class="lftbottom">
+        <%filename.forEach(function(file){ %>
+          <div class="grp">
+          <%  if(file.split(".").length > 1){ %>
+            <%= file %>
+        <%  } else{ %>
+          <a href=""><i class="ri-folder-3-fill"></i>  <%= file %></a>
+       <% } %>
+            <div class="grpicn">
+           <a href="/Fileshare/<%= file %>" > <i class="ri-share-box-fill"></i></a>
+             <a href="/delete/<%= file %>"><i class="ri-delete-bin-line"></i></a>
+          </div>
+          </div>
+       <% })%>
+      </div>
+        </div>
+        <h3 id="Nofiles">No file to show</h3>
+        <div id="right">
+          <div id="righttop">
+            <div class="leaves">
+          <h4><% if(fileNames) { %>
+            <%= fileNames %>
+          <% } else{ %>
+            No files
+          <% } %></h4> 
+          <i id="cross" class="ri-close-line"></i>
+          </div>
+          </div>
+
+      <form action="/save/<%= filename%>" method="post" >
+      <textarea name="textdata" id="" cols="30" rows="10">
+        <%= filedata %>
+      </textarea>
+      <button>Save</button>
+    </form>
+    </div>
+  </div>
+  <script src="../javascripts/index.js"></script>
+</body>
+</html>

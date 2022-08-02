@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+#main{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+#left{
+    width: 20%;
+    height: 100%;
+    background-color: #a29d9d;
+}
+#right{
+    width: 80%;
+    height: 100%;
+    background-color:  #d6d1d1;;
+}
+.lfttop{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: aqua; */
+    padding: 15px 15px;
+    border-bottom: 1px solid black;
+
+}
+i{
+    margin-right: 18px;
+}
+.lftbottom{
+    /* background-color: aqua; */
+    padding: 15px 15px;
+}
+
+.grp{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: aqua; */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.147);
+    margin-top: 5px;
+}
+.grp i{
+    font-size: 12px;
+    margin-top: 2px;
+    text-decoration: none;
+}
+#righttop{
+    width: 100%;
+    height: 60px;
+    background-color:  #d6d1d1;;
+    padding: 18px 30px;
+    box-shadow: 10px 10px 5px solid black;
+}
+input{
+    padding: 10px 20px;
+    width: 100%;
+    display: none;
+}
+
+.icons i:hover{
+    padding: 2px 2px;
+    background-color: rgba(66, 72, 72, 0.307);
+    border-radius: 10px;
+}
+textarea{
+    width: 100%;
+    height: 80%;
+    /* border: none; */
+    border: 2px solid #ccc;
+    font-size: 16px;
+    /* margin-top: 10px; */
+    background-color: rgb(244, 244, 244) ;
+}
+.leaves{
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+
+.leaves h4{
+    background-color: rgb(142, 134, 134);
+    /* width: 100px; */
+    width: fit-content;
+    padding: 10px 18px;
+    color: #fff;
+    border-top-left-radius: 180px;
+    box-shadow: 1px 3px 15px black;
+    border-bottom-right-radius: 180px;
+}
+.leaves i{
+    position: absolute;
+    top: 0%;
+    right: -7%;
+    font-size: 12px;
+    color: rgb(9, 9, 9);
+}
+button{
+    position: absolute;
+    top: 10%;
+    right: 2%;
+    padding: 8px 12px;
+    border: none;
+
+}
+button:hover{
+    background-color: rgb(175, 168, 168) ;
+}
+#Nofiles{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgba(0, 0, 0, 0.46);
+    display: none;
+}
